@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<table id=\"users\">\r\n  <tbody>\r\n    <tr>\r\n      <th>User</th>\r\n      <th>Password</th>\r\n    </tr>\r\n    <tr *ngFor=\"let u of array\">\r\n      <td>{{ u.value.username }} </td>\r\n      <td>{{ u.value.password }}</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<table id=\"users\">\r\n  <tbody>\r\n    <tr>\r\n      <th> Username </th>\r\n      <th> Password </th>\r\n    </tr>\r\n    <tr *ngFor=\"let u of array\">\r\n      <td>{{ u.value.username }} </td>\r\n      <td>{{ u.value.password }}</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n");
 
 /***/ }),
 
