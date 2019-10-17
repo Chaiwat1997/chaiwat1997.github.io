@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (" <form action=\"\" method=\"POST\" (ngSubmit)=\"signup(regesFrom)\" #regesFrom=\"ngForm\" style=\"border:1px solid #ccc\">\r\n  <div class=\"container\">\r\n    <h1>ลงทะเบียน</h1>\r\n  <p>กรุณากรอกข้อมูลต่อไปนี้ให้ครบถ้วน</p>\r\n    <hr>\r\n    <label for=\"user\"><b>User</b></label>\r\n    <input type=\"text\" placeholder=\"User\" #user name=\"username\" ngModel>\r\n\r\n    <label for=\"password\"><b>Password</b></label>\r\n    <input type=\"password\" placeholder=\"Password\" #password name=\"password\" ngModel>\r\n\r\n    <p>ยอมรับข้อกำหนด<a href=\"#\" style=\"color:dodgerblue\">ข้อกำหนด</a>ของเว็บไซต์</p>\r\n\r\n    <div class=\"clearfix\">\r\n      <button type=\"button\" class=\"cancelbtn\">ยกเลิก</button>\r\n      <button type=\"submit\" class=\"signupbtn\" >ลงทะเบียน</button>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = (" <form action=\"\" method=\"POST\" (ngSubmit)=\"signup(regesFrom)\" #regesFrom=\"ngForm\" style=\"border:1px solid #ccc\">\r\n  <div class=\"container\">\r\n    <h1>ลงทะเบียน</h1>\r\n  <p>กรุณากรอกข้อมูลต่อไปนี้ให้ครบถ้วน</p>\r\n    <hr>\r\n    <label for=\"user\"><b>Username</b></label>\r\n    <input type=\"text\" placeholder=\"User\" #user name=\"username\" ngModel>\r\n\r\n    <label for=\"password\"><b>Password</b></label>\r\n    <input type=\"password\" placeholder=\"Password\" #password name=\"password\" ngModel>\r\n\r\n    <p>ยอมรับข้อกำหนด<a href=\"#\" style=\"color:dodgerblue\">ข้อกำหนด</a>ของเว็บไซต์</p>\r\n\r\n    <div class=\"clearfix\">\r\n      <button type=\"button\" class=\"cancelbtn\">ยกเลิก</button>\r\n      <button type=\"submit\" class=\"signupbtn\" >ลงทะเบียน</button>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -741,6 +741,7 @@ let RegisterComponent = class RegisterComponent {
     signup(data) {
         console.log(data.value);
         this.db.list("/59110440130/user").push(data.value);
+        this.router.navigate(['/login']);
     }
 };
 RegisterComponent.ctorParameters = () => [
