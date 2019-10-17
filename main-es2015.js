@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<img src=\"/assets/comsciubu-facebook.jpg\" alt=\"CSUBU\" class=\"center\">\r\n<app-users></app-users>\r\n<app-login></app-login>\r\n<app-register></app-register>");
+/* harmony default export */ __webpack_exports__["default"] = ("<img src=\"/assets/comsciubu-facebook.jpg\" alt=\"CSUBU\" class=\"center\">");
 
 /***/ }),
 
@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form action=\"\" method=\"POST\">\r\n  <label for=\"user\"><b>User : </b></label>\r\n  <input type=\"text\" #user name=\"user\" value=\"\">\r\n  <label for=\"password\"><b> Password : </b></label>\r\n  <input type=\"password\" #password name=\"password\" value=\"xxxxxxx\">\r\n  <a (click)=\"login(user.value, password.value)\">Login</a>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<form action=\"\" method=\"POST\">\r\n  <label for=\"user\"><b>Username : </b></label>\r\n  <input type=\"text\" #user name=\"user\" value=\"\">\r\n  <label for=\"password\"><b> Password : </b></label>\r\n  <input type=\"password\" #password name=\"password\" value=\"xxxxxxx\">\r\n  <button (click)=\"login(user.value, password.value)\">Login</button>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"topnav\">\r\n  <a class=\"/\" href=\"#home\">Home</a>\r\n  <a href=\"/card\">Cards</a>\r\n  <a href=\"/login\">Login</a>\r\n  <a href=\"/register\">Register</a>\r\n  <a href=\"/users\">Users</a>\r\n  <a href=\"#about\">About</a>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"topnav\">\r\n  <a class=\"/\" href=\"#home\">Home</a>\r\n  <a (click)=\"page1()\"> Cards </a>\r\n  <a (click)=\"page2()\"> Login </a>\r\n  <a (click)=\"page3()\"> Register </a>\r\n  <a (click)=\"page4()\"> Users </a>\r\n  <a href=\"#about\"> About </a>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -784,13 +784,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopbarComponent", function() { return TopbarComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 let TopbarComponent = class TopbarComponent {
-    constructor() { }
+    constructor(router) {
+        this.router = router;
+    }
     ngOnInit() {
     }
+    page1() {
+        this.router.navigate(['/card']);
+    }
+    page2() {
+        this.router.navigate(['/login']);
+    }
+    page3() {
+        this.router.navigate(['/register']);
+    }
+    page4() {
+        this.router.navigate(['/users']);
+    }
 };
+TopbarComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+];
 TopbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-topbar',
